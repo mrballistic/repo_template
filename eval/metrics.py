@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Iterable
+from collections.abc import Iterable
 
 
 def accuracy(y_true: Iterable[int], y_pred: Iterable[int]) -> float:
@@ -10,5 +10,5 @@ def accuracy(y_true: Iterable[int], y_pred: Iterable[int]) -> float:
         raise ValueError("y_true and y_pred must have the same length")
     if not yt:
         raise ValueError("inputs must be non-empty")
-    correct = sum(1 for a, b in zip(yt, yp) if a == b)
+    correct = sum(1 for a, b in zip(yt, yp, strict=True) if a == b)
     return correct / len(yt)
