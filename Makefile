@@ -1,12 +1,18 @@
 SHELL := /bin/bash
 
-.PHONY: test lint format
+.PHONY: install sync test lint format
+
+install:
+	uv sync --group dev
+
+sync:
+	uv sync --group dev
 
 test:
-	pytest
+	uv run pytest
 
 lint:
-	ruff check .
+	uv run ruff check .
 
 format:
-	ruff format .
+	uv run ruff format .

@@ -32,13 +32,24 @@ This template is designed to help teams accelerate the product development lifec
 > Adjust tooling to match your org standards. This is intentionally minimal.
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -U pip
-python -m pip install -e ".[dev]"
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-pytest -q
-ruff check .
+# Install dependencies
+uv sync --group dev
+
+# Run tests and lint
+uv run pytest
+uv run ruff check .
+```
+
+Or use the Makefile:
+
+```bash
+make install   # Install dependencies
+make test      # Run tests
+make lint      # Run linter
+make format    # Format code
 ```
 
 ## Notes on AI usage
