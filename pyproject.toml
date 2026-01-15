@@ -3,21 +3,28 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "project_name"
+name = "flybot"
 version = "0.1.0"
-description = "Template for spec-driven ML product development"
+description = "Fly Bot: Internal Alaska standby travel recommender"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.32.0",
+  "pydantic>=2.9.0",
+  "pydantic-settings>=2.5.0",
+]
 
 [dependency-groups]
 dev = [
   "pytest>=8.0.0",
+  "pytest-asyncio>=0.24.0",
+  "httpx>=0.27.0",
   "ruff>=0.6.0",
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/project_name"]
+packages = ["src/flybot"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
