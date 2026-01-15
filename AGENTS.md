@@ -49,8 +49,6 @@ Track rule changes in `docs/compounding_engineering.md`.
 - Maintain a clear eval story (offline + monitoring)
 
 
-# AGENTS.md — Fly Bot (Python + uv)
-
 Instructions for coding agents (human or AI) working in this repo.
 
 ---
