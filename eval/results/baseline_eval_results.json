@@ -1,0 +1,71 @@
+{
+  "overall": {
+    "brier_score": 0.20229999999999998,
+    "accuracy": 0.72,
+    "precision": 0.726027397260274,
+    "recall": 0.7066666666666667,
+    "f1": 0.7162162162162162,
+    "mean_prediction": 0.4403333333333333,
+    "mean_label": 0.5,
+    "num_examples": 300
+  },
+  "by_scenario": {
+    "easy": {
+      "brier_score": 0.1925,
+      "accuracy": 0.8,
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888888888888889,
+      "mean_prediction": 0.625,
+      "mean_label": 0.8,
+      "num_examples": 100
+    },
+    "hard": {
+      "brier_score": 0.16375,
+      "accuracy": 0.8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "mean_prediction": 0.22499999999999998,
+      "mean_label": 0.2,
+      "num_examples": 100
+    },
+    "medium": {
+      "brier_score": 0.25065000000000004,
+      "accuracy": 0.56,
+      "precision": 0.5652173913043478,
+      "recall": 0.52,
+      "f1": 0.5416666666666667,
+      "mean_prediction": 0.4709999999999999,
+      "mean_label": 0.5,
+      "num_examples": 100
+    }
+  },
+  "calibration": [
+    {
+      "mean_predicted": 0.18749999999999997,
+      "mean_actual": 0.16666666666666666,
+      "count": 60
+    },
+    {
+      "mean_predicted": 0.33416666666666667,
+      "mean_actual": 0.23333333333333334,
+      "count": 60
+    },
+    {
+      "mean_predicted": 0.4716666666666666,
+      "mean_actual": 0.43333333333333335,
+      "count": 60
+    },
+    {
+      "mean_predicted": 0.5583333333333333,
+      "mean_actual": 0.6666666666666666,
+      "count": 60
+    },
+    {
+      "mean_predicted": 0.65,
+      "mean_actual": 1.0,
+      "count": 60
+    }
+  ]
+}
