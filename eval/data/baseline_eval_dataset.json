@@ -1,0 +1,2409 @@
+{
+  "metadata": {
+    "generated_at": "2026-01-15T15:22:49.156715",
+    "num_examples": 300,
+    "description": "Synthetic evaluation dataset for baseline model"
+  },
+  "examples": [
+    {
+      "example_id": "easy_000",
+      "seats_required": 1,
+      "capacity": 150,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_001",
+      "seats_required": 1,
+      "capacity": 151,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_002",
+      "seats_required": 1,
+      "capacity": 152,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_003",
+      "seats_required": 1,
+      "capacity": 153,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_004",
+      "seats_required": 1,
+      "capacity": 154,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_005",
+      "seats_required": 1,
+      "capacity": 155,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_006",
+      "seats_required": 1,
+      "capacity": 156,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_007",
+      "seats_required": 1,
+      "capacity": 157,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_008",
+      "seats_required": 1,
+      "capacity": 158,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_009",
+      "seats_required": 1,
+      "capacity": 159,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_010",
+      "seats_required": 1,
+      "capacity": 160,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_011",
+      "seats_required": 1,
+      "capacity": 161,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_012",
+      "seats_required": 1,
+      "capacity": 162,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_013",
+      "seats_required": 1,
+      "capacity": 163,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_014",
+      "seats_required": 1,
+      "capacity": 164,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_015",
+      "seats_required": 1,
+      "capacity": 165,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_016",
+      "seats_required": 1,
+      "capacity": 166,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_017",
+      "seats_required": 1,
+      "capacity": 167,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_018",
+      "seats_required": 1,
+      "capacity": 168,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_019",
+      "seats_required": 1,
+      "capacity": 169,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_020",
+      "seats_required": 1,
+      "capacity": 170,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_021",
+      "seats_required": 1,
+      "capacity": 171,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_022",
+      "seats_required": 1,
+      "capacity": 172,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_023",
+      "seats_required": 1,
+      "capacity": 173,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_024",
+      "seats_required": 1,
+      "capacity": 174,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_025",
+      "seats_required": 1,
+      "capacity": 175,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_026",
+      "seats_required": 1,
+      "capacity": 176,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_027",
+      "seats_required": 1,
+      "capacity": 177,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_028",
+      "seats_required": 1,
+      "capacity": 178,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_029",
+      "seats_required": 1,
+      "capacity": 179,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_030",
+      "seats_required": 1,
+      "capacity": 180,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_031",
+      "seats_required": 1,
+      "capacity": 181,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_032",
+      "seats_required": 1,
+      "capacity": 182,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_033",
+      "seats_required": 1,
+      "capacity": 183,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_034",
+      "seats_required": 1,
+      "capacity": 184,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_035",
+      "seats_required": 1,
+      "capacity": 185,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_036",
+      "seats_required": 1,
+      "capacity": 186,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_037",
+      "seats_required": 1,
+      "capacity": 187,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_038",
+      "seats_required": 1,
+      "capacity": 188,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_039",
+      "seats_required": 1,
+      "capacity": 189,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_040",
+      "seats_required": 1,
+      "capacity": 190,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_041",
+      "seats_required": 1,
+      "capacity": 191,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_042",
+      "seats_required": 1,
+      "capacity": 192,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_043",
+      "seats_required": 1,
+      "capacity": 193,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_044",
+      "seats_required": 1,
+      "capacity": 194,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_045",
+      "seats_required": 1,
+      "capacity": 195,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_046",
+      "seats_required": 1,
+      "capacity": 196,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_047",
+      "seats_required": 1,
+      "capacity": 197,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_048",
+      "seats_required": 1,
+      "capacity": 198,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_049",
+      "seats_required": 1,
+      "capacity": 199,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_050",
+      "seats_required": 1,
+      "capacity": 150,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_051",
+      "seats_required": 1,
+      "capacity": 151,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_052",
+      "seats_required": 1,
+      "capacity": 152,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_053",
+      "seats_required": 1,
+      "capacity": 153,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_054",
+      "seats_required": 1,
+      "capacity": 154,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_055",
+      "seats_required": 1,
+      "capacity": 155,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_056",
+      "seats_required": 1,
+      "capacity": 156,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_057",
+      "seats_required": 1,
+      "capacity": 157,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_058",
+      "seats_required": 1,
+      "capacity": 158,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_059",
+      "seats_required": 1,
+      "capacity": 159,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_060",
+      "seats_required": 1,
+      "capacity": 160,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_061",
+      "seats_required": 1,
+      "capacity": 161,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_062",
+      "seats_required": 1,
+      "capacity": 162,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_063",
+      "seats_required": 1,
+      "capacity": 163,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_064",
+      "seats_required": 1,
+      "capacity": 164,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_065",
+      "seats_required": 1,
+      "capacity": 165,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_066",
+      "seats_required": 1,
+      "capacity": 166,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_067",
+      "seats_required": 1,
+      "capacity": 167,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_068",
+      "seats_required": 1,
+      "capacity": 168,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_069",
+      "seats_required": 1,
+      "capacity": 169,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_070",
+      "seats_required": 1,
+      "capacity": 170,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_071",
+      "seats_required": 1,
+      "capacity": 171,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_072",
+      "seats_required": 1,
+      "capacity": 172,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_073",
+      "seats_required": 1,
+      "capacity": 173,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_074",
+      "seats_required": 1,
+      "capacity": 174,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_075",
+      "seats_required": 1,
+      "capacity": 175,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_076",
+      "seats_required": 1,
+      "capacity": 176,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_077",
+      "seats_required": 1,
+      "capacity": 177,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_078",
+      "seats_required": 1,
+      "capacity": 178,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_079",
+      "seats_required": 1,
+      "capacity": 179,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_080",
+      "seats_required": 1,
+      "capacity": 180,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_081",
+      "seats_required": 1,
+      "capacity": 181,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_082",
+      "seats_required": 1,
+      "capacity": 182,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_083",
+      "seats_required": 1,
+      "capacity": 183,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_084",
+      "seats_required": 1,
+      "capacity": 184,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_085",
+      "seats_required": 1,
+      "capacity": 185,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_086",
+      "seats_required": 1,
+      "capacity": 186,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_087",
+      "seats_required": 1,
+      "capacity": 187,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_088",
+      "seats_required": 1,
+      "capacity": 188,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_089",
+      "seats_required": 1,
+      "capacity": 189,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_090",
+      "seats_required": 1,
+      "capacity": 190,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_091",
+      "seats_required": 1,
+      "capacity": 191,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_092",
+      "seats_required": 1,
+      "capacity": 192,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_093",
+      "seats_required": 1,
+      "capacity": 193,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_094",
+      "seats_required": 1,
+      "capacity": 194,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_095",
+      "seats_required": 1,
+      "capacity": 195,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_096",
+      "seats_required": 1,
+      "capacity": 196,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_097",
+      "seats_required": 1,
+      "capacity": 197,
+      "time_to_departure_hours": 5.0,
+      "label_cleared": 1,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_098",
+      "seats_required": 1,
+      "capacity": 198,
+      "time_to_departure_hours": 6.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "easy_099",
+      "seats_required": 1,
+      "capacity": 199,
+      "time_to_departure_hours": 7.0,
+      "label_cleared": 0,
+      "scenario": "easy"
+    },
+    {
+      "example_id": "medium_000",
+      "seats_required": 2,
+      "capacity": 100,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_001",
+      "seats_required": 3,
+      "capacity": 101,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_002",
+      "seats_required": 2,
+      "capacity": 102,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_003",
+      "seats_required": 3,
+      "capacity": 103,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_004",
+      "seats_required": 2,
+      "capacity": 104,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_005",
+      "seats_required": 3,
+      "capacity": 105,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_006",
+      "seats_required": 2,
+      "capacity": 106,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_007",
+      "seats_required": 3,
+      "capacity": 107,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_008",
+      "seats_required": 2,
+      "capacity": 108,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_009",
+      "seats_required": 3,
+      "capacity": 109,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_010",
+      "seats_required": 2,
+      "capacity": 110,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_011",
+      "seats_required": 3,
+      "capacity": 111,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_012",
+      "seats_required": 2,
+      "capacity": 112,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_013",
+      "seats_required": 3,
+      "capacity": 113,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_014",
+      "seats_required": 2,
+      "capacity": 114,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_015",
+      "seats_required": 3,
+      "capacity": 115,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_016",
+      "seats_required": 2,
+      "capacity": 116,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_017",
+      "seats_required": 3,
+      "capacity": 117,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_018",
+      "seats_required": 2,
+      "capacity": 118,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_019",
+      "seats_required": 3,
+      "capacity": 119,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_020",
+      "seats_required": 2,
+      "capacity": 120,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_021",
+      "seats_required": 3,
+      "capacity": 121,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_022",
+      "seats_required": 2,
+      "capacity": 122,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_023",
+      "seats_required": 3,
+      "capacity": 123,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_024",
+      "seats_required": 2,
+      "capacity": 124,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_025",
+      "seats_required": 3,
+      "capacity": 125,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_026",
+      "seats_required": 2,
+      "capacity": 126,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_027",
+      "seats_required": 3,
+      "capacity": 127,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_028",
+      "seats_required": 2,
+      "capacity": 128,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_029",
+      "seats_required": 3,
+      "capacity": 129,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_030",
+      "seats_required": 2,
+      "capacity": 100,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_031",
+      "seats_required": 3,
+      "capacity": 101,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_032",
+      "seats_required": 2,
+      "capacity": 102,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_033",
+      "seats_required": 3,
+      "capacity": 103,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_034",
+      "seats_required": 2,
+      "capacity": 104,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_035",
+      "seats_required": 3,
+      "capacity": 105,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_036",
+      "seats_required": 2,
+      "capacity": 106,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_037",
+      "seats_required": 3,
+      "capacity": 107,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_038",
+      "seats_required": 2,
+      "capacity": 108,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_039",
+      "seats_required": 3,
+      "capacity": 109,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_040",
+      "seats_required": 2,
+      "capacity": 110,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_041",
+      "seats_required": 3,
+      "capacity": 111,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_042",
+      "seats_required": 2,
+      "capacity": 112,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_043",
+      "seats_required": 3,
+      "capacity": 113,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_044",
+      "seats_required": 2,
+      "capacity": 114,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_045",
+      "seats_required": 3,
+      "capacity": 115,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_046",
+      "seats_required": 2,
+      "capacity": 116,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_047",
+      "seats_required": 3,
+      "capacity": 117,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_048",
+      "seats_required": 2,
+      "capacity": 118,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_049",
+      "seats_required": 3,
+      "capacity": 119,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_050",
+      "seats_required": 2,
+      "capacity": 120,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_051",
+      "seats_required": 3,
+      "capacity": 121,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_052",
+      "seats_required": 2,
+      "capacity": 122,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_053",
+      "seats_required": 3,
+      "capacity": 123,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_054",
+      "seats_required": 2,
+      "capacity": 124,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_055",
+      "seats_required": 3,
+      "capacity": 125,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_056",
+      "seats_required": 2,
+      "capacity": 126,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_057",
+      "seats_required": 3,
+      "capacity": 127,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_058",
+      "seats_required": 2,
+      "capacity": 128,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_059",
+      "seats_required": 3,
+      "capacity": 129,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_060",
+      "seats_required": 2,
+      "capacity": 100,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_061",
+      "seats_required": 3,
+      "capacity": 101,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_062",
+      "seats_required": 2,
+      "capacity": 102,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_063",
+      "seats_required": 3,
+      "capacity": 103,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_064",
+      "seats_required": 2,
+      "capacity": 104,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_065",
+      "seats_required": 3,
+      "capacity": 105,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_066",
+      "seats_required": 2,
+      "capacity": 106,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_067",
+      "seats_required": 3,
+      "capacity": 107,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_068",
+      "seats_required": 2,
+      "capacity": 108,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_069",
+      "seats_required": 3,
+      "capacity": 109,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_070",
+      "seats_required": 2,
+      "capacity": 110,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_071",
+      "seats_required": 3,
+      "capacity": 111,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_072",
+      "seats_required": 2,
+      "capacity": 112,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_073",
+      "seats_required": 3,
+      "capacity": 113,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_074",
+      "seats_required": 2,
+      "capacity": 114,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_075",
+      "seats_required": 3,
+      "capacity": 115,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_076",
+      "seats_required": 2,
+      "capacity": 116,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_077",
+      "seats_required": 3,
+      "capacity": 117,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_078",
+      "seats_required": 2,
+      "capacity": 118,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_079",
+      "seats_required": 3,
+      "capacity": 119,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_080",
+      "seats_required": 2,
+      "capacity": 120,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_081",
+      "seats_required": 3,
+      "capacity": 121,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_082",
+      "seats_required": 2,
+      "capacity": 122,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_083",
+      "seats_required": 3,
+      "capacity": 123,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_084",
+      "seats_required": 2,
+      "capacity": 124,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_085",
+      "seats_required": 3,
+      "capacity": 125,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_086",
+      "seats_required": 2,
+      "capacity": 126,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_087",
+      "seats_required": 3,
+      "capacity": 127,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_088",
+      "seats_required": 2,
+      "capacity": 128,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_089",
+      "seats_required": 3,
+      "capacity": 129,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_090",
+      "seats_required": 2,
+      "capacity": 100,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_091",
+      "seats_required": 3,
+      "capacity": 101,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_092",
+      "seats_required": 2,
+      "capacity": 102,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_093",
+      "seats_required": 3,
+      "capacity": 103,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_094",
+      "seats_required": 2,
+      "capacity": 104,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 1,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_095",
+      "seats_required": 3,
+      "capacity": 105,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_096",
+      "seats_required": 2,
+      "capacity": 106,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_097",
+      "seats_required": 3,
+      "capacity": 107,
+      "time_to_departure_hours": 3.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_098",
+      "seats_required": 2,
+      "capacity": 108,
+      "time_to_departure_hours": 4.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "medium_099",
+      "seats_required": 3,
+      "capacity": 109,
+      "time_to_departure_hours": 2.0,
+      "label_cleared": 0,
+      "scenario": "medium"
+    },
+    {
+      "example_id": "hard_000",
+      "seats_required": 4,
+      "capacity": 80,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_001",
+      "seats_required": 5,
+      "capacity": 81,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_002",
+      "seats_required": 6,
+      "capacity": 82,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_003",
+      "seats_required": 7,
+      "capacity": 83,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_004",
+      "seats_required": 4,
+      "capacity": 84,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_005",
+      "seats_required": 5,
+      "capacity": 85,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_006",
+      "seats_required": 6,
+      "capacity": 86,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_007",
+      "seats_required": 7,
+      "capacity": 87,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_008",
+      "seats_required": 4,
+      "capacity": 88,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_009",
+      "seats_required": 5,
+      "capacity": 89,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_010",
+      "seats_required": 6,
+      "capacity": 90,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_011",
+      "seats_required": 7,
+      "capacity": 91,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_012",
+      "seats_required": 4,
+      "capacity": 92,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_013",
+      "seats_required": 5,
+      "capacity": 93,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_014",
+      "seats_required": 6,
+      "capacity": 94,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_015",
+      "seats_required": 7,
+      "capacity": 95,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_016",
+      "seats_required": 4,
+      "capacity": 96,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_017",
+      "seats_required": 5,
+      "capacity": 97,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_018",
+      "seats_required": 6,
+      "capacity": 98,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_019",
+      "seats_required": 7,
+      "capacity": 99,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_020",
+      "seats_required": 4,
+      "capacity": 80,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_021",
+      "seats_required": 5,
+      "capacity": 81,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_022",
+      "seats_required": 6,
+      "capacity": 82,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_023",
+      "seats_required": 7,
+      "capacity": 83,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_024",
+      "seats_required": 4,
+      "capacity": 84,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_025",
+      "seats_required": 5,
+      "capacity": 85,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_026",
+      "seats_required": 6,
+      "capacity": 86,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_027",
+      "seats_required": 7,
+      "capacity": 87,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_028",
+      "seats_required": 4,
+      "capacity": 88,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_029",
+      "seats_required": 5,
+      "capacity": 89,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_030",
+      "seats_required": 6,
+      "capacity": 90,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_031",
+      "seats_required": 7,
+      "capacity": 91,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_032",
+      "seats_required": 4,
+      "capacity": 92,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_033",
+      "seats_required": 5,
+      "capacity": 93,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_034",
+      "seats_required": 6,
+      "capacity": 94,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_035",
+      "seats_required": 7,
+      "capacity": 95,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_036",
+      "seats_required": 4,
+      "capacity": 96,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_037",
+      "seats_required": 5,
+      "capacity": 97,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_038",
+      "seats_required": 6,
+      "capacity": 98,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_039",
+      "seats_required": 7,
+      "capacity": 99,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_040",
+      "seats_required": 4,
+      "capacity": 80,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_041",
+      "seats_required": 5,
+      "capacity": 81,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_042",
+      "seats_required": 6,
+      "capacity": 82,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_043",
+      "seats_required": 7,
+      "capacity": 83,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_044",
+      "seats_required": 4,
+      "capacity": 84,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_045",
+      "seats_required": 5,
+      "capacity": 85,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_046",
+      "seats_required": 6,
+      "capacity": 86,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_047",
+      "seats_required": 7,
+      "capacity": 87,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_048",
+      "seats_required": 4,
+      "capacity": 88,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_049",
+      "seats_required": 5,
+      "capacity": 89,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_050",
+      "seats_required": 6,
+      "capacity": 90,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_051",
+      "seats_required": 7,
+      "capacity": 91,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_052",
+      "seats_required": 4,
+      "capacity": 92,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_053",
+      "seats_required": 5,
+      "capacity": 93,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_054",
+      "seats_required": 6,
+      "capacity": 94,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_055",
+      "seats_required": 7,
+      "capacity": 95,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_056",
+      "seats_required": 4,
+      "capacity": 96,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_057",
+      "seats_required": 5,
+      "capacity": 97,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_058",
+      "seats_required": 6,
+      "capacity": 98,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_059",
+      "seats_required": 7,
+      "capacity": 99,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_060",
+      "seats_required": 4,
+      "capacity": 80,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_061",
+      "seats_required": 5,
+      "capacity": 81,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_062",
+      "seats_required": 6,
+      "capacity": 82,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_063",
+      "seats_required": 7,
+      "capacity": 83,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_064",
+      "seats_required": 4,
+      "capacity": 84,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_065",
+      "seats_required": 5,
+      "capacity": 85,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_066",
+      "seats_required": 6,
+      "capacity": 86,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_067",
+      "seats_required": 7,
+      "capacity": 87,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_068",
+      "seats_required": 4,
+      "capacity": 88,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_069",
+      "seats_required": 5,
+      "capacity": 89,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_070",
+      "seats_required": 6,
+      "capacity": 90,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_071",
+      "seats_required": 7,
+      "capacity": 91,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_072",
+      "seats_required": 4,
+      "capacity": 92,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_073",
+      "seats_required": 5,
+      "capacity": 93,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_074",
+      "seats_required": 6,
+      "capacity": 94,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_075",
+      "seats_required": 7,
+      "capacity": 95,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_076",
+      "seats_required": 4,
+      "capacity": 96,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_077",
+      "seats_required": 5,
+      "capacity": 97,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_078",
+      "seats_required": 6,
+      "capacity": 98,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_079",
+      "seats_required": 7,
+      "capacity": 99,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_080",
+      "seats_required": 4,
+      "capacity": 80,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_081",
+      "seats_required": 5,
+      "capacity": 81,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_082",
+      "seats_required": 6,
+      "capacity": 82,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_083",
+      "seats_required": 7,
+      "capacity": 83,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_084",
+      "seats_required": 4,
+      "capacity": 84,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_085",
+      "seats_required": 5,
+      "capacity": 85,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_086",
+      "seats_required": 6,
+      "capacity": 86,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_087",
+      "seats_required": 7,
+      "capacity": 87,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_088",
+      "seats_required": 4,
+      "capacity": 88,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_089",
+      "seats_required": 5,
+      "capacity": 89,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_090",
+      "seats_required": 6,
+      "capacity": 90,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_091",
+      "seats_required": 7,
+      "capacity": 91,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 1,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_092",
+      "seats_required": 4,
+      "capacity": 92,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_093",
+      "seats_required": 5,
+      "capacity": 93,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_094",
+      "seats_required": 6,
+      "capacity": 94,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_095",
+      "seats_required": 7,
+      "capacity": 95,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_096",
+      "seats_required": 4,
+      "capacity": 96,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_097",
+      "seats_required": 5,
+      "capacity": 97,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_098",
+      "seats_required": 6,
+      "capacity": 98,
+      "time_to_departure_hours": 1.0,
+      "label_cleared": 0,
+      "scenario": "hard"
+    },
+    {
+      "example_id": "hard_099",
+      "seats_required": 7,
+      "capacity": 99,
+      "time_to_departure_hours": 1.5,
+      "label_cleared": 0,
+      "scenario": "hard"
+    }
+  ]
+}
