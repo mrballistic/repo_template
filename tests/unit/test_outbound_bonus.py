@@ -7,8 +7,6 @@ from __future__ import annotations
 
 import math
 
-import pytest
-
 from flybot.scoring import compute_outbound_margin_bonus
 
 
@@ -48,7 +46,7 @@ def test_outbound_bonus_monotonicity():
     """AC-5: Bonus increases monotonically with seat_margin."""
     margins = [-10, -5, -2, 0, 2, 5, 10]
     bonuses = [compute_outbound_margin_bonus(m) for m in margins]
-    
+
     # Check that each bonus is greater than the previous
     for i in range(1, len(bonuses)):
         assert bonuses[i] > bonuses[i - 1], f"Monotonicity violated at index {i}"

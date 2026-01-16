@@ -5,8 +5,6 @@ AC-8: Test reason code selection for known scenarios.
 
 from __future__ import annotations
 
-import pytest
-
 from flybot.scoring import ReasonCode, select_reason_codes
 
 
@@ -147,7 +145,7 @@ def test_reason_multiple_codes():
         empties_available=False,  # Missing empties
         empties_stale=True,  # Stale empties
     )
-    
+
     # Should have all applicable codes
     expected_codes = {
         ReasonCode.LOW_RETURN_PROBABILITY,
@@ -158,7 +156,7 @@ def test_reason_multiple_codes():
         ReasonCode.MISSING_EMPTIES,
         ReasonCode.STALE_EMPTIES,
     }
-    
+
     for code in expected_codes:
         assert code in codes
 

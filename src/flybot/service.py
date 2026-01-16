@@ -5,11 +5,19 @@ Orchestrates scoring, client calls, and response building.
 
 from __future__ import annotations
 
+import os
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from flybot.baseline import baseline_model_predict
-from flybot.clients import EmptiesClient, EmptiesSnapshot, Flight, ScheduleClient
+from flybot.clients import EmptiesClient, EmptiesSnapshot, ScheduleClient
+from flybot.logging import log_prediction
+from flybot.metrics import (
+    record_dependency_latency,
+    record_fallback,
+    record_request_latency,
+    record_return_coverage,
+)
 from flybot.schemas import (
     FlybotRecommendRequest,
     FlybotRecommendResponse,
@@ -48,48 +56,48 @@ async def recommend(
     use_ml: bool = False,
 ) -> FlybotRecommendResponse:
     """Generate flight recommendations.
-    
+
     Args:
         request: Validated request
         empties_client: Client for empties data
         schedule_client: Client for schedule data
         model_version: Model version identifier
         use_ml: Whether to use ML model (False = baseline only)
-    
+
     Returns:
         FlybotRecommendResponse with ranked recommendations
     """
     start_time = time.perf_counter()
     timing = {}
-    
+
     # Stage 1: Compute derived values
     validation_start = time.perf_counter()
-    
-    travelers_list = [
-        Traveler(age_bucket=AgeBucket(t.age_bucket.value))
-        for t in request.travelers
-    ]
+
+    travelers_list = [Traveler(age_bucket=AgeBucket(t.age_bucket.value)) for t in request.travelers]
     seats_req = seats_required(travelers_list)
     buffer_minutes = compute_return_buffer_minutes(request.return_window.return_flex_minutes)
-    
+
     timing["validation"] = _ms_elapsed(validation_start)
-    
+
     # Stage 2: Fetch outbound empties
     fetch_outbound_start = time.perf_counter()
-    
-    now = datetime.now()
+
+    demo_now_iso = os.getenv("FLYBOT_DEMO_NOW_ISO")
+    now = datetime.fromisoformat(demo_now_iso) if demo_now_iso else datetime.now()
     empties_snapshot = await empties_client.get_empties(
         origin=request.origin,
         destination=request.destination,
         lookahead_minutes=request.lookahead_minutes,
         snapshot_time=now,
     )
-    
-    timing["fetch_outbound"] = _ms_elapsed(fetch_outbound_start)
-    
+
+    fetch_outbound_ms = _ms_elapsed(fetch_outbound_start)
+    timing["fetch_outbound"] = fetch_outbound_ms
+    record_dependency_latency("empties", fetch_outbound_ms)
+
     empties_available = empties_snapshot is not None
     empties_stale = empties_snapshot.is_stale if empties_snapshot else False
-    
+
     # Default empty snapshot if unavailable
     if not empties_snapshot:
         empties_snapshot = EmptiesSnapshot(
@@ -97,7 +105,7 @@ async def recommend(
             flights=[],
             is_stale=False,
         )
-    
+
     # Filter outbound flights by seat margin
     outbound_candidates = []
     for flight in empties_snapshot.flights:
@@ -106,39 +114,45 @@ async def recommend(
             # Default: exclude negative margin flights
             if margin >= 0:
                 outbound_candidates.append((flight, margin))
-    
+
     # Stage 3: For each outbound, fetch return options
     fetch_return_start = time.perf_counter()
-    
+
     return_flights = await schedule_client.get_return_flights(
         origin=request.destination,  # Reversed
         destination=request.origin,
         earliest=request.return_window.earliest,
         latest=request.return_window.latest,
     )
-    
-    timing["fetch_return"] = _ms_elapsed(fetch_return_start)
-    
+
+    fetch_return_ms = _ms_elapsed(fetch_return_start)
+    timing["fetch_return"] = fetch_return_ms
+    record_dependency_latency("schedule", fetch_return_ms)
+
     schedule_available = return_flights is not None
     if not return_flights:
         return_flights = []
-    
+
     # Stage 4: Score trips
     scoring_start = time.perf_counter()
-    
+
     scored_trips = []
-    
+
     for outbound_flight, seat_margin in outbound_candidates:
         # Filter eligible return flights
         eligible_returns = [
-            rf for rf in return_flights
+            rf
+            for rf in return_flights
             if is_return_eligible(
                 rf.arrival,
                 request.return_window.latest,
                 buffer_minutes,
             )
         ]
-        
+
+        # Record coverage metric
+        record_return_coverage(len(eligible_returns))
+
         # Predict return probabilities (baseline for now)
         if eligible_returns:
             # Extract features for baseline
@@ -147,19 +161,19 @@ async def recommend(
                 for rf in eligible_returns
             ]
             return_probs = baseline_model_predict(flight_features, seats_req)
-            
+
             # Aggregate
             return_success_prob = aggregate_return_success_probability(return_probs)
         else:
             return_probs = []
             return_success_prob = 0.0
-        
+
         # Compute outbound bonus
         outbound_bonus = compute_outbound_margin_bonus(seat_margin)
-        
+
         # Compute trip score
         trip_score_value = compute_trip_score(return_success_prob, outbound_bonus)
-        
+
         # Create scored trip
         scored_trip = ScoredTrip(
             trip_id=f"{outbound_flight.flight_number}_{len(scored_trips)}",
@@ -168,32 +182,34 @@ async def recommend(
             seat_margin=seat_margin,
             outbound_departure=outbound_flight.departure,
         )
-        
-        scored_trips.append((
-            scored_trip,
-            outbound_flight,
-            eligible_returns,
-            return_probs,
-            outbound_bonus,
-        ))
-    
+
+        scored_trips.append(
+            (
+                scored_trip,
+                outbound_flight,
+                eligible_returns,
+                return_probs,
+                outbound_bonus,
+            )
+        )
+
     # Rank trips
     ranked = rank_trips_deterministic([st[0] for st in scored_trips])
-    
+
     timing["scoring"] = _ms_elapsed(scoring_start)
-    
+
     # Stage 5: Build response
     fallback_used = not use_ml or not schedule_available
-    
+
+    if fallback_used:
+        record_fallback()
+
     recommendations = []
     for scored_trip in ranked:
         # Find original data
-        trip_data = next(
-            td for td in scored_trips
-            if td[0].trip_id == scored_trip.trip_id
-        )
+        trip_data = next(td for td in scored_trips if td[0].trip_id == scored_trip.trip_id)
         _, outbound_flight, eligible_returns, return_probs, outbound_bonus = trip_data
-        
+
         # Build recommendation
         reason_codes = select_reason_codes(
             return_success_probability=scored_trip.return_success_probability,
@@ -204,14 +220,17 @@ async def recommend(
             empties_available=empties_available,
             empties_stale=empties_stale,
         )
-        
+
         # Generate explanations from reason codes
         explanations = _generate_explanations(reason_codes, scored_trip)
-        
+
         rec = Recommendation(
             trip_score=scored_trip.trip_score,
             score_breakdown=ScoreBreakdown(
-                formula="trip_score = return_success_probability * (0.7 + 0.3 * outbound_margin_bonus)",
+                formula=(
+                    "trip_score = return_success_probability * "
+                    "(0.7 + 0.3 * outbound_margin_bonus)"
+                ),
                 return_success_probability=scored_trip.return_success_probability,
                 outbound_margin_bonus=outbound_bonus,
                 trip_score=scored_trip.trip_score,
@@ -230,17 +249,20 @@ async def recommend(
                     arrival=rf.arrival,
                     clearance_probability=prob,
                 )
-                for rf, prob in zip(eligible_returns, return_probs)
+                for rf, prob in zip(eligible_returns, return_probs, strict=True)
             ],
             explanations=explanations,
             reason_codes=[rc.value for rc in reason_codes],
         )
         recommendations.append(rec)
-    
+
     # Build final response
     total_ms = _ms_elapsed(start_time)
-    
-    return FlybotRecommendResponse(
+
+    # Record request latency metric
+    record_request_latency(total_ms)
+
+    response = FlybotRecommendResponse(
         request_id=request.request_id,
         model_version=model_version,
         generated_at=datetime.now(),
@@ -257,6 +279,34 @@ async def recommend(
         ),
     )
 
+    # Log prediction for monitoring (top recommendation only)
+    if recommendations:
+        top_rec = recommendations[0]
+        log_prediction(
+            request_id=request.request_id,
+            model_version=model_version,
+            origin=request.origin,
+            destination=request.destination,
+            lookahead_minutes=request.lookahead_minutes or 60,
+            seats_required=seats_req,
+            return_deadline_ts=request.return_window.latest,
+            return_flex_minutes=request.return_window.return_flex_minutes,
+            required_return_buffer_minutes=buffer_minutes,
+            outbound_flight_id=top_rec.outbound.flight_number,
+            outbound_open_seats_now=top_rec.outbound.open_seats_now,
+            outbound_seat_margin=top_rec.outbound.seat_margin,
+            return_flight_ids=[opt.flight_number for opt in top_rec.return_options],
+            return_probs=[opt.clearance_probability for opt in top_rec.return_options],
+            return_success_probability=top_rec.score_breakdown.return_success_probability,
+            outbound_margin_bonus=top_rec.score_breakdown.outbound_margin_bonus,
+            trip_score=top_rec.trip_score,
+            fallback_used=fallback_used,
+            reason_codes=top_rec.reason_codes,
+            timing_total_ms=total_ms,
+        )
+
+    return response
+
 
 def _generate_explanations(
     reason_codes: list[ReasonCode],
@@ -264,7 +314,7 @@ def _generate_explanations(
 ) -> list[str]:
     """Generate user-facing explanations from reason codes."""
     explanations = []
-    
+
     for code in reason_codes:
         if code == ReasonCode.HIGH_RETURN_PROBABILITY:
             explanations.append(
@@ -287,5 +337,5 @@ def _generate_explanations(
             explanations.append("Outbound flight has limited available seats")
         elif code == ReasonCode.FALLBACK_BASELINE_USED:
             explanations.append("Using baseline estimates (ML model unavailable)")
-    
+
     return explanations

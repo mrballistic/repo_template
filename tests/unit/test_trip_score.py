@@ -7,8 +7,6 @@ from __future__ import annotations
 
 import math
 
-import pytest
-
 from flybot.scoring import compute_trip_score
 
 

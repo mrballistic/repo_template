@@ -44,7 +44,7 @@ class EmptiesClient(ABC):
         snapshot_time: datetime,
     ) -> EmptiesSnapshot | None:
         """Fetch empties snapshot for flights departing within lookahead window.
-        
+
         Returns None if service is unavailable.
         """
         pass
@@ -62,7 +62,7 @@ class ScheduleClient(ABC):
         latest: datetime,
     ) -> list[Flight] | None:
         """Fetch return flight schedule within time window.
-        
+
         Returns None if service is unavailable.
         """
         pass

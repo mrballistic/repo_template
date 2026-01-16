@@ -7,8 +7,6 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-import pytest
-
 from flybot.scoring import ScoredTrip, rank_trips_deterministic
 
 
@@ -123,10 +121,10 @@ def test_rank_stability():
         )
         for i in range(5)
     ]
-    
+
     ranked1 = rank_trips_deterministic(trips, epsilon=0.01)
     ranked2 = rank_trips_deterministic(trips, epsilon=0.01)
-    
+
     ids1 = [t.trip_id for t in ranked1]
     ids2 = [t.trip_id for t in ranked2]
     assert ids1 == ids2

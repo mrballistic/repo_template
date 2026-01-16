@@ -6,8 +6,6 @@ AC-Contract-2: Invalid requests fail with expected error messages.
 
 from __future__ import annotations
 
-from datetime import datetime, timedelta
-
 import pytest
 from pydantic import ValidationError
 
@@ -15,8 +13,6 @@ from flybot.schemas import (
     AgeBucket,
     Constraints,
     FlybotRecommendRequest,
-    ReturnWindow,
-    TravelerInput,
 )
 
 
@@ -86,7 +82,7 @@ def test_invalid_request_missing_required_field():
     }
     with pytest.raises(ValidationError) as exc_info:
         FlybotRecommendRequest.model_validate(data)
-    
+
     errors = exc_info.value.errors()
     assert any(e["loc"] == ("destination",) for e in errors)
 
@@ -106,7 +102,7 @@ def test_invalid_request_wrong_iata_code_length():
     }
     with pytest.raises(ValidationError) as exc_info:
         FlybotRecommendRequest.model_validate(data)
-    
+
     errors = exc_info.value.errors()
     assert any(e["loc"] == ("origin",) for e in errors)
 
@@ -127,7 +123,7 @@ def test_invalid_request_negative_lookahead():
     }
     with pytest.raises(ValidationError) as exc_info:
         FlybotRecommendRequest.model_validate(data)
-    
+
     errors = exc_info.value.errors()
     assert any(e["loc"] == ("lookahead_minutes",) for e in errors)
 
@@ -147,7 +143,7 @@ def test_invalid_request_return_window_inverted():
     }
     with pytest.raises(ValidationError) as exc_info:
         FlybotRecommendRequest.model_validate(data)
-    
+
     errors = exc_info.value.errors()
     assert any("latest" in str(e["loc"]) for e in errors)
 
@@ -167,7 +163,7 @@ def test_invalid_request_negative_flex():
     }
     with pytest.raises(ValidationError) as exc_info:
         FlybotRecommendRequest.model_validate(data)
-    
+
     errors = exc_info.value.errors()
     assert any("return_flex_minutes" in str(e["loc"]) for e in errors)
 
@@ -187,7 +183,7 @@ def test_invalid_request_empty_travelers():
     }
     with pytest.raises(ValidationError) as exc_info:
         FlybotRecommendRequest.model_validate(data)
-    
+
     errors = exc_info.value.errors()
     assert any(e["loc"] == ("travelers",) for e in errors)
 
@@ -207,7 +203,7 @@ def test_invalid_request_bad_age_bucket():
     }
     with pytest.raises(ValidationError) as exc_info:
         FlybotRecommendRequest.model_validate(data)
-    
+
     errors = exc_info.value.errors()
     assert any("age_bucket" in str(e["loc"]) for e in errors)
 

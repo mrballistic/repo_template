@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import asdict, dataclass
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 
 
@@ -25,14 +25,14 @@ class EvalExample:
 
 def generate_synthetic_dataset(num_examples: int = 100) -> list[EvalExample]:
     """Generate synthetic evaluation dataset with known patterns.
-    
+
     Creates scenarios with varying difficulty:
     - Easy: Solo travelers, large capacity, advance notice
     - Medium: Small groups, medium capacity, moderate notice
     - Hard: Large groups, small capacity, short notice
     """
     examples = []
-    
+
     # Easy scenarios (high success rate)
     for i in range(num_examples // 3):
         example = EvalExample(
@@ -44,7 +44,7 @@ def generate_synthetic_dataset(num_examples: int = 100) -> list[EvalExample]:
             scenario="easy",
         )
         examples.append(example)
-    
+
     # Medium scenarios (moderate success rate)
     for i in range(num_examples // 3):
         example = EvalExample(
@@ -56,7 +56,7 @@ def generate_synthetic_dataset(num_examples: int = 100) -> list[EvalExample]:
             scenario="medium",
         )
         examples.append(example)
-    
+
     # Hard scenarios (low success rate)
     for i in range(num_examples - 2 * (num_examples // 3)):
         example = EvalExample(
@@ -68,14 +68,14 @@ def generate_synthetic_dataset(num_examples: int = 100) -> list[EvalExample]:
             scenario="hard",
         )
         examples.append(example)
-    
+
     return examples
 
 
 def save_dataset(examples: list[EvalExample], output_path: Path) -> None:
     """Save dataset to JSON file."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+
     data = {
         "metadata": {
             "generated_at": datetime.now().isoformat(),
@@ -84,10 +84,10 @@ def save_dataset(examples: list[EvalExample], output_path: Path) -> None:
         },
         "examples": [asdict(ex) for ex in examples],
     }
-    
+
     with open(output_path, "w") as f:
         json.dump(data, f, indent=2)
-    
+
     print(f"Saved {len(examples)} examples to {output_path}")
 
 
@@ -95,7 +95,7 @@ def load_dataset(dataset_path: Path) -> list[EvalExample]:
     """Load dataset from JSON file."""
     with open(dataset_path) as f:
         data = json.load(f)
-    
+
     examples = [EvalExample(**ex) for ex in data["examples"]]
     return examples
 
@@ -105,17 +105,19 @@ if __name__ == "__main__":
     dataset_path = Path("eval/data/baseline_eval_dataset.json")
     examples = generate_synthetic_dataset(num_examples=300)
     save_dataset(examples, dataset_path)
-    
+
     # Print statistics
-    print(f"\nDataset statistics:")
+    print("\nDataset statistics:")
     print(f"  Total examples: {len(examples)}")
-    
+
     by_scenario = {}
     for ex in examples:
         by_scenario.setdefault(ex.scenario, []).append(ex)
-    
+
     for scenario, scenario_examples in sorted(by_scenario.items()):
         cleared_count = sum(ex.label_cleared for ex in scenario_examples)
-        print(f"  {scenario.capitalize()}: {len(scenario_examples)} examples, "
-              f"{cleared_count}/{len(scenario_examples)} cleared "
-              f"({100*cleared_count/len(scenario_examples):.1f}%)")
+        print(
+            f"  {scenario.capitalize()}: {len(scenario_examples)} examples, "
+            f"{cleared_count}/{len(scenario_examples)} cleared "
+            f"({100 * cleared_count / len(scenario_examples):.1f}%)"
+        )

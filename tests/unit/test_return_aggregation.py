@@ -7,8 +7,6 @@ from __future__ import annotations
 
 import math
 
-import pytest
-
 from flybot.scoring import aggregate_return_success_probability
 
 
@@ -70,7 +68,7 @@ def test_aggregate_many_small_probabilities():
     # 10 flights each with p=0.1
     # success = 1 - (0.9)^10 ≈ 0.6513
     result = aggregate_return_success_probability([0.1] * 10)
-    expected = 1 - (0.9 ** 10)
+    expected = 1 - (0.9**10)
     assert math.isclose(result, expected, abs_tol=1e-9)
 
 

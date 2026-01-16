@@ -7,8 +7,6 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-import pytest
-
 from flybot.scoring import is_return_eligible
 
 
@@ -66,6 +64,6 @@ def test_return_eligible_large_buffer():
     buffer_minutes = 180  # 3 hours
     arrival = datetime(2026, 2, 8, 15, 0)  # Exactly 3 hours before
     assert is_return_eligible(arrival, latest, buffer_minutes) is True
-    
+
     arrival_too_late = datetime(2026, 2, 8, 15, 1)  # 1 minute too late
     assert is_return_eligible(arrival_too_late, latest, buffer_minutes) is False

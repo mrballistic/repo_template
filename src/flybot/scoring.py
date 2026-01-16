@@ -44,9 +44,7 @@ def seats_required(travelers: list[Traveler]) -> int:
     return count
 
 
-def compute_return_buffer_minutes(
-    return_flex_minutes: int, buffer_max_minutes: int = 120
-) -> int:
+def compute_return_buffer_minutes(return_flex_minutes: int, buffer_max_minutes: int = 120) -> int:
     """Compute required return buffer based on flexibility.
 
     Formula:
@@ -57,11 +55,11 @@ def compute_return_buffer_minutes(
     """
     # Handle negative flex as 0
     flex = max(0, return_flex_minutes)
-    
+
     # Compute h with clamping
     h = 1 - flex / buffer_max_minutes
     h = max(0.0, min(1.0, h))  # Clamp to [0, 1]
-    
+
     # Compute required buffer
     required_buffer = round(buffer_max_minutes * h)
     return required_buffer
@@ -78,7 +76,7 @@ def is_return_eligible(
     AC-3: Test arrival <= latest-buffer → eligible, boundary cases.
     """
     from datetime import timedelta
-    
+
     buffered_deadline = latest_return_time - timedelta(minutes=buffer_minutes)
     return arrival_time <= buffered_deadline
 
@@ -92,12 +90,12 @@ def aggregate_return_success_probability(eligible_probs: list[float]) -> float:
     """
     if not eligible_probs:
         return 0.0
-    
+
     # Compute product of (1 - p_i)
     product = 1.0
     for p in eligible_probs:
-        product *= (1 - p)
-    
+        product *= 1 - p
+
     return 1 - product
 
 
@@ -120,7 +118,8 @@ def compute_trip_score(
 ) -> float:
     """Compute final trip score.
 
-    Formula: trip_score = return_success_probability * (return_weight + outbound_weight * outbound_margin_bonus)
+    Formula: trip_score = return_success_probability *
+        (return_weight + outbound_weight * outbound_margin_bonus)
 
     AC-6: Test trip_score = return_prob * (0.7 + 0.3*outbound_bonus).
     """
@@ -139,9 +138,7 @@ class ScoredTrip:
     outbound_departure: datetime
 
 
-def rank_trips_deterministic(
-    trips: list[ScoredTrip], epsilon: float = 0.005
-) -> list[ScoredTrip]:
+def rank_trips_deterministic(trips: list[ScoredTrip], epsilon: float = 0.005) -> list[ScoredTrip]:
     """Rank trips deterministically with stable tie-breakers.
 
     Tie-break rules if trip_score within epsilon:
@@ -153,7 +150,7 @@ def rank_trips_deterministic(
     """
     if not trips:
         return []
-    
+
     def sort_key(trip: ScoredTrip) -> tuple:
         # Negate for descending order (higher is better)
         # Use timestamp for earlier is better (ascending)
@@ -163,10 +160,10 @@ def rank_trips_deterministic(
             -trip.seat_margin,  # Tie-break 2: higher margin
             trip.outbound_departure,  # Tie-break 3: earlier departure
         )
-    
+
     # Sort trips
     sorted_trips = sorted(trips, key=sort_key)
-    
+
     # Apply epsilon grouping if needed
     # Group trips within epsilon and apply tie-breakers
     result = []
@@ -176,18 +173,18 @@ def rank_trips_deterministic(
         current_score = sorted_trips[i].trip_score
         group = [sorted_trips[i]]
         j = i + 1
-        
+
         while j < len(sorted_trips):
             if abs(sorted_trips[j].trip_score - current_score) <= epsilon:
                 group.append(sorted_trips[j])
                 j += 1
             else:
                 break
-        
+
         # Sort group by tie-break rules (already sorted by sort_key)
         result.extend(group)
         i = j
-    
+
     return result
 
 
@@ -219,30 +216,30 @@ def select_reason_codes(
     AC-8: Test reason code selection for known scenarios.
     """
     codes = []
-    
+
     # Check buffer severity
     if buffer_minutes >= 100:
         codes.append(ReasonCode.HARD_BUFFER_APPLIED)
-    
+
     # Check return coverage
     if eligible_return_count <= 1:
         codes.append(ReasonCode.LOW_RETURN_COVERAGE)
-    
+
     # Check empties availability
     if not empties_available:
         codes.append(ReasonCode.MISSING_EMPTIES)
-    
+
     if empties_stale:
         codes.append(ReasonCode.STALE_EMPTIES)
-    
+
     # Check fallback
     if fallback_used:
         codes.append(ReasonCode.FALLBACK_BASELINE_USED)
-    
+
     # Check seat margin
     if seat_margin < 0:
         codes.append(ReasonCode.NEGATIVE_SEAT_MARGIN)
-    
+
     # Check return probability level
     if return_success_probability >= 0.7:
         codes.append(ReasonCode.HIGH_RETURN_PROBABILITY)
@@ -250,5 +247,5 @@ def select_reason_codes(
         codes.append(ReasonCode.MODERATE_RETURN_PROBABILITY)
     else:
         codes.append(ReasonCode.LOW_RETURN_PROBABILITY)
-    
+
     return codes

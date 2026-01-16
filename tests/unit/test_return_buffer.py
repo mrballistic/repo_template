@@ -5,8 +5,6 @@ AC-2: Test flex=0→120, flex=120→0, flex>120 clamps to 0, negative flex cases
 
 from __future__ import annotations
 
-import pytest
-
 from flybot.scoring import compute_return_buffer_minutes
 
 

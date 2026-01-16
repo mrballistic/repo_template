@@ -5,8 +5,6 @@ AC-1: Test adult/child/infant bucket cases and deterministic output.
 
 from __future__ import annotations
 
-import pytest
-
 from flybot.scoring import AgeBucket, Traveler, seats_required
 
 
