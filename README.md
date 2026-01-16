@@ -213,7 +213,7 @@ Frontend:
 
 ## 📝 License
 
-[Your License Here]
+MIT
 
 ---
 
