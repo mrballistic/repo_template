@@ -186,9 +186,9 @@ class DemoScheduleClient(ScheduleClient):
         for i in range(self._config.return_count):
             # More flights during peak return hours (late afternoon/evening)
             if rng.random() < 0.5:  # 50% during peak return times
-                # Prefer evening returns (15-21)
+                # Prefer evening returns (15-21), bias toward earlier
                 window_hours = total_minutes / 60.0
-                target_offset_hours = rng.uniform(0, min(window_hours, 6.0))  # Bias toward earlier in evening
+                target_offset_hours = rng.uniform(0, min(window_hours, 6.0))
                 depart_offset_min = int(target_offset_hours * 60) + rng.randint(-30, 30)
                 depart_offset_min = max(0, min(total_minutes, depart_offset_min))
             else:
