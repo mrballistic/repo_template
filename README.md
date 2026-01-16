@@ -1,6 +1,6 @@
 # Fly Bot - Standby Travel Recommender
 
-Internal Alaska Airlines tool for recommending standby travel options based on real-time seat availability and return probability predictions.
+Presumptive/demo of a possible internal Alaska Airlines tool for recommending standby travel options based on real-time seat availability and return probability predictions.
 
 ## 🎯 What We've Built
 
