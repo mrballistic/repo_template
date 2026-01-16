@@ -6,3 +6,5 @@ Fly Bot API starting up...
 INFO:     127.0.0.1:52845 - "GET /healthz HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52847 - "OPTIONS /v1/flybot/recommend HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52847 - "POST /v1/flybot/recommend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53065 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53065 - "GET /favicon.ico HTTP/1.1" 404 Not Found
